@@ -2,27 +2,54 @@
   <router-outlet></router-outlet>
 </div> -->
 
-<p-menubar [model]="items">
-  <ng-template pTemplate="start">
+<p-megaMenu [model]="menuItems">
+  <!-- <ng-template pTemplate="start">
       <img src="assets/logo.jpg" height="40" class="mr-2">
   </ng-template>
   <ng-template pTemplate="end">
       <input type="text" pInputText placeholder="Search">
-  </ng-template>
-</p-menubar>
+  </ng-template>  ef0081 -->
+</p-megaMenu>
 
 <div class="grid grid-nogutter surface-section text-800">
-  <div style="background: #e9d2e7" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+  <div style="background: #28682d" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
       <section>
-          <span class="block text-6xl font-bold mb-1" style="font-family:cursive;">We Spread Happiness</span>
+          <span class="block text-6xl font-bold mb-1" style="font-family:cursive;color: whitesmoke;">We Spread Happiness</span>
           <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">rent out best toys from us</div>
-          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;color: whitesmoke !important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           
           <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: azure;border: none;" class="mr-3 p-button-raised"></button>
           <!-- <button pButton pRipple label="Live Demo" type="button" class="p-button-outlined"></button> -->
       </section>
   </div>
-  <div style="background: #e9d2e7" class="col-12 md:col-6 overflow-hidden">
+  <div style="background: #28682d" class="col-12 md:col-6 overflow-hidden">
       <img src="assets/child.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
   </div>
 </div>
+
+<p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+  <!-- <ng-template pTemplate="header">
+      <h5>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h5>
+  </ng-template> -->
+  <ng-template let-product pTemplate="item">
+      <div class="product-item">
+          <div class="product-item-content">
+              <div class="mb-3">
+                <img
+                  src="{{product.image}}"
+                  [alt]="product.name" class="product-image" />
+              </div>
+              <div>
+                  <h4 class="mb-1">{{product.name}}</h4>
+                  <h6 class="mt-0 mb-3">${{product.price}}</h6>
+                  <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+                  <div class="car-buttons mt-5">
+                      <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+                      <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
+                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </ng-template>
+</p-carousel>

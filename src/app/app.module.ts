@@ -8,9 +8,8 @@ import {MenubarModule} from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
-
-
-
+import { MegaMenuModule } from 'primeng/megamenu';
+import { CarouselModule } from 'primeng/carousel';
 
 @NgModule({
   declarations: [
@@ -24,7 +23,9 @@ import { FormsModule } from '@angular/forms';
     ButtonModule,
     //MenuItem,
     InputTextModule,
-    FormsModule
+    FormsModule,
+    MegaMenuModule,
+    CarouselModule
   ],
   providers: [],
   bootstrap: [AppComponent]
