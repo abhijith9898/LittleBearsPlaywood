@@ -2,28 +2,39 @@
   <router-outlet></router-outlet>
 </div> -->
 
-<p-megaMenu [model]="menuItems">
-  <!-- <ng-template pTemplate="start">
-      <img src="assets/logo.jpg" height="40" class="mr-2">
-  </ng-template>
-  <ng-template pTemplate="end">
-      <input type="text" pInputText placeholder="Search">
-  </ng-template>  ef0081 -->
-</p-megaMenu>
+<div class="custom-menu">
+  <p-megaMenu [model]="menuItems">
+    <ng-template pTemplate="start">
+        <img src="assets/logo.jpg" height="40" class="mr-2">
+    </ng-template>
+    <!-- <ng-template pTemplate="end">
+        <input type="text" pInputText placeholder="Search">
+    </ng-template> -->
+  </p-megaMenu>
+</div>
+
 
 <div class="grid grid-nogutter surface-section text-800">
-  <div style="background: #28682d" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
+  <!-- <div style="background: #28682d" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
       <section>
           <span class="block text-6xl font-bold mb-1" style="font-family:cursive;color: whitesmoke;">We Spread Happiness</span>
           <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">rent out best toys from us</div>
           <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;color: whitesmoke !important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
           
           <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: azure;border: none;" class="mr-3 p-button-raised"></button>
-          <!-- <button pButton pRipple label="Live Demo" type="button" class="p-button-outlined"></button> -->
-      </section>
-  </div>
-  <div style="background: #28682d" class="col-12 md:col-6 overflow-hidden">
-      <img src="assets/child.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+         
+      </section> background: rgba(22, 35, 23, 0.52);
+  </div> -->
+  <div style="background: #f2ebe9" class="col-12 md:col-12 overflow-hidden">       
+      <div>
+      </div>
+        <img src="assets/child.jpg" alt="Image" class="md:ml-auto block md:w-full">
+      <div style="position: absolute;top: 40%;left: 6%;">
+        <span class="block text-6xl font-bold mb-1" style="font-family:cursive;color: #f2ebe9;">Little Bears Playwood</span>
+        <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">the library of your dreams</div>
+          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;color: #f2ebe9 !important;">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>          
+          <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: #f2ebe9;border: none;" class="mr-3 p-button-raised"></button>
+      </div>
   </div>
 </div>
 
