@@ -14,7 +14,8 @@
     }
 
     :host ::ng-deep .custom-menu .p-megamenu {
-        background: #264143 !important;
+        background:  rgb(19 68 70) !important;    
+        /* #1d342d !important  #264143*/
         border:none;
         display: flex !important;
         padding: 1.1rem !important;          
@@ -75,7 +76,7 @@
 
     :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
         margin-top: 1.2rem !important;
-        background: #f2ebe9;
+        background: #eddcd9;
     }
 
     :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus {
@@ -95,6 +96,14 @@
 
     :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
         background: none !important;
+    }
+
+    div.transbox {       
+        filter: brightness(45%);
+    }
+
+    :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+        background-color: rgb(19 68 70) !important;
     }
 
 
