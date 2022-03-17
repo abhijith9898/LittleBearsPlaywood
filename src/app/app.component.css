@@ -25,15 +25,17 @@
         margin-left: 25% !important;
     }
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list .p-menuitem-text {
-        color: #f2ebe9 !important;
+    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
+        color: #fff !important;
+        font-size: larger !important;
+        font-weight: 500 !important;
     }
 
     :host ::ng-deep .custom-menu .p-submenu-icon {
         color: #f2ebe9 !important;
     }
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list .p-menuitem-text:hover {
+    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text:hover {
         color: #e99f4c !important;
     }
 
@@ -41,13 +43,18 @@
         color: #e99f4c !important;
     }
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list> .p-menuitem:hover .p-menuitem-text{
+    :host ::ng-deep .custom-menu .p-megamenu-root-list> .p-menuitem .p-menuitem-text:hover{
         color: #e99f4c !important;
     }
 
     :host ::ng-deep .custom-menu .p-megamenu-root-list> .p-menuitem:hover .p-submenu-icon {
         color: #e99f4c !important;
     }
+
+    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
+        color: #000000 !important;
+        font-weight: 700 !important;
+    }    
 
     /* :host ::ng-deep .custom-menu .p-megamenu .p-menuitem-link .p-menuitem-text {
         color: #495057 !important; 
@@ -74,9 +81,24 @@
         background: none !important;
     }
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
+    /* :host ::ng-deep .custom-menu .p-megamenu-panel {
+        display: none !important;
+    } */
+
+    :host ::ng-deep .custom-menu .p-megamenu-panel {
+        display: none;
+    }
+
+    :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem:hover .p-megamenu-panel {
+        display: block !important;
         margin-top: 1.2rem !important;
-        background: #eddcd9;
+        background: #f2ebe9;
+    }
+
+    :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
+        display: block;
+        margin-top: 1.2rem !important;
+        background: #f2ebe9;
     }
 
     :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus {
