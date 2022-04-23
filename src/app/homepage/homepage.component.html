@@ -1,0 +1,97 @@
+<!-- ---------------------COVER------------------------------------------ -->
+
+<div class="grid grid-nogutter surface-section text-800">
+    <div class="col-12 md:col-12 overflow-hidden">
+      <div class="transbox">
+        <img src="assets/child.jpg" alt="Image" style="margin-top: -3%;object-fit: cover;height: 745px;"
+          class="md:ml-auto block md:w-full">
+      </div>
+      <div style="position: absolute;top: 48%;left: 6%;">
+        <div class="text-6xl font-bold mb-3"
+          style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;color: #ffffff;">
+          The library of your dreams <br>at
+          your doorstep</div>
+        <!-- <div class="text-6xl font-bold mb-3" style="color: #ffffff;"><b>THE LIBRARY OF YOUR DREAMS <br>AT
+            YOUR DOORSTEP</b></div> -->
+        <button pButton pRipple label="View Catalogue" type="button"
+          style="background: #d17400;color: #ffff;border: none; margin-top: 7%;" class="mr-3 p-button-raised"></button>
+      </div>
+    </div>
+  </div>
+  
+  <!-- ---------------------HOME-CONTENT----ff0d86-------------------------------------- -->
+  
+  <section>
+  
+    <!-- ----------------------Quote-section------------------------------------------ -->
+  
+    <div>
+      <div class="quote-section">
+        <div class="quote-text">
+          <p>
+            You say that you love your children,<br>
+            And are concerned that they learn today,<br>
+            As am I, that’s why I’m providing <br>
+            A variety of kinds of play. <br>
+            - Laurie Monopoli      
+          </p>
+        </div>
+      </div>
+    </div>
+  
+    <!-- ----------------------Questin-slider------------------------------------------ -->
+  
+  <div class="ques-slider">
+    <section class="home">
+      <div class="container">
+        <div class="row">
+          <div class="home-text">
+            <p class="animate-text">
+              <span>Have you noticed that your child’s attachment to toys is often transient?</span>
+              <span>Would you like to save money and still give your sweethearts a wonderful time?</span>
+              <span>Are you concerned about the deteriorating environment that your kids should lead someday?</span>
+              <!-- <span>Stay At Home</span>
+                       <span>Avoid Close Contact</span> -->
+            </p>
+            <h1>Little Bear’s Playwood is your destination!</h1>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  
+  
+  <!-- ----------------------TOYS-SAMPLE-CAROUSEL------------------------------------------ -->
+  
+  <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+    [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
+    <!-- <ng-template pTemplate="header">
+        <h5>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h5>
+      </ng-template> -->
+    <ng-template let-product pTemplate="item">
+      <div class="product-item">
+        <div class="product-item-content">
+          <div class="mb-3">
+            <img src="{{product.image}}" [alt]="product.name" class="product-image" />
+          </div>
+          <div>
+            <h4 class="mb-1">{{product.name}}</h4>
+            <h6 class="mt-0 mb-3">${{product.price}}</h6>
+            <span
+              [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
+            <div class="car-buttons mt-5">
+              <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
+              <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill">
+              </p-button>
+              <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </ng-template>
+  </p-carousel>
+  
+  
+  </section>
+  

@@ -2,65 +2,39 @@
   <router-outlet></router-outlet>
 </div> -->
 
+<!-- ---------------------TOP-MENU------------------------------------------ -->
+
 <div class="custom-menu">
   <p-megaMenu [model]="menuItems">
     <ng-template pTemplate="start">
-        <img src="assets/logo.jpg" height="40" class="mr-2">
+      <div>
+        <img src="assets/logo-border.png" height="80" style="float: left;margin-top: -1rem;" class="mr-2">
+        <span style="color: white;font-family: cursive;"><span
+            style="color:#d17400;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;"><b>LITTLE
+              BEARS PLAYWOOD</b></span><br>the play is underway</span>
+      </div>
     </ng-template>
-    <!-- <ng-template pTemplate="end">
-        <input type="text" pInputText placeholder="Search">
-    </ng-template> -->
+    <ng-template pTemplate="end">
+      <div>
+        <span><i class="pi pi-shopping-cart" style="font-size: 2rem; color: #d17400;"></i></span>
+      </div>
+    </ng-template>
   </p-megaMenu>
 </div>
 
+<!--------------------------------SECTIONS----------------------------------------->
 
-<div class="grid grid-nogutter surface-section text-800">
-  <!-- <div style="background: #28682d" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-      <section>
-          <span class="block text-6xl font-bold mb-1" style="font-family:cursive;color: whitesmoke;">We Spread Happiness</span>
-          <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">rent out best toys from us</div>
-          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;color: whitesmoke !important;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          
-          <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: azure;border: none;" class="mr-3 p-button-raised"></button>
-         
-      </section> background: rgba(22, 35, 23, 0.52);
-  </div> -->
-  <div style="background: #f2ebe9" class="col-12 md:col-12 overflow-hidden">       
-      <div>
-      </div>
-        <img src="assets/child.jpg" alt="Image" class="md:ml-auto block md:w-full">
-      <div style="position: absolute;top: 40%;left: 6%;">
-        <span class="block text-6xl font-bold mb-1" style="font-family:cursive;color: #f2ebe9;">Little Bears Playwood</span>
-        <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">the library of your dreams</div>
-          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;color: #f2ebe9 !important;">Lorem ipsum dolor sit amet,<br> consectetur adipiscing elit,<br> sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>          
-          <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: #f2ebe9;border: none;" class="mr-3 p-button-raised"></button>
-      </div>
-  </div>
+
+<div class="container">
+  <router-outlet></router-outlet>
 </div>
 
-<p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true" [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
-  <!-- <ng-template pTemplate="header">
-      <h5>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h5>
-  </ng-template> -->
-  <ng-template let-product pTemplate="item">
-      <div class="product-item">
-          <div class="product-item-content">
-              <div class="mb-3">
-                <img
-                  src="{{product.image}}"
-                  [alt]="product.name" class="product-image" />
-              </div>
-              <div>
-                  <h4 class="mb-1">{{product.name}}</h4>
-                  <h6 class="mt-0 mb-3">${{product.price}}</h6>
-                  <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
-                  <div class="car-buttons mt-5">
-                      <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-                      <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill"></p-button>
-                      <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
-                  </div>
-              </div>
-          </div>
-      </div>
-  </ng-template>
-</p-carousel>
+<!-- ---------------------FOOTER------------------------------------------ -->
+
+<footer>
+  <div>
+    <div class="footer">
+      <h2 style="font-family: sans-serif;font-weight: 800;padding-top: 30px;">Little Bears Playwood</h2>
+    </div>
+  </div>
+</footer>
