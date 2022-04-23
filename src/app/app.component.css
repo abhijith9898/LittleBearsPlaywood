@@ -1,67 +1,52 @@
+:host ::ng-deep .custom-menu .p-megamenu {
+    background: rgb(19 68 70) !important;
+    /* #1d342d !important  #264143*/
+    border: none;
+    display: flex !important;
+    padding: 1.1rem !important;
+}
 
-    .product-item .product-item-content {
-        border: 1px solid var(--surface-d);
-        border-radius: 3px;
-        margin: 5.3rem;
-        text-align: center;
-        padding: 3rem 0;
-        height: 26rem;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-root-list {
+    margin-left: 23% !important;
+}
 
-    .product-item .product-image {
-        width: 50%;
-        box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text {
+    color: #fff !important;
+    font-size: larger !important;
+    font-weight: 500 !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu {
-        background:  rgb(19 68 70) !important;    
-        /* #1d342d !important  #264143*/
-        border:none;
-        display: flex !important;
-        padding: 1.1rem !important;          
-    }
+:host ::ng-deep .custom-menu .p-submenu-icon {
+    color: #f2ebe9 !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list {        
-        margin-left: 25% !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link .p-menuitem-text:hover {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text {
-        color: #fff !important;
-        font-size: larger !important;
-        font-weight: 500 !important;
-    }
+:host ::ng-deep .custom-menu .p-submenu-icon:hover {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-submenu-icon {
-        color: #f2ebe9 !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem .p-menuitem-text:hover {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link .p-menuitem-text:hover {
-        color: #e99f4c !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem:hover .p-submenu-icon {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-submenu-icon:hover {
-        color: #e99f4c !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
+    color: #000000 !important;
+    font-weight: 700 !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list> .p-menuitem .p-menuitem-text:hover{
-        color: #e99f4c !important;
-    }
-
-    :host ::ng-deep .custom-menu .p-megamenu-root-list> .p-menuitem:hover .p-submenu-icon {
-        color: #e99f4c !important;
-    }
-
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
-        color: #000000 !important;
-        font-weight: 700 !important;
-    }    
-
-    /* :host ::ng-deep .custom-menu .p-megamenu .p-menuitem-link .p-menuitem-text {
+/* :host ::ng-deep .custom-menu .p-megamenu .p-menuitem-link .p-menuitem-text {
         color: #495057 !important; 
-    } background: rgba(22, 35, 23, 0.52); */    
-    
+    } background: rgba(22, 35, 23, 0.52); */
 
-    /* :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem .p-menuitem-active > .p-menuitem-link .p-menuitem-text {
+
+/* :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem .p-menuitem-active > .p-menuitem-link .p-menuitem-text {
         color: #e99f4c !important;
     }
 
@@ -69,63 +54,53 @@
         color: #e99f4c !important;
     } */
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-menuitem .p-menuitem-active {
-        background: none !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-menuitem .p-menuitem-active {
+    background: none !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:not(.p-disabled):hover {
-        background: none !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link:not(.p-disabled):hover {
+    background: none !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem.p-menuitem-active > .p-menuitem-link {
-        background: none !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem.p-menuitem-active>.p-menuitem-link {
+    background: none !important;
+}
 
-    /* :host ::ng-deep .custom-menu .p-megamenu-panel {
+/* :host ::ng-deep .custom-menu .p-megamenu-panel {
         display: none !important;
     } */
 
-    :host ::ng-deep .custom-menu .p-megamenu-panel {
-        display: none;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-panel {
+    display: none;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem:hover .p-megamenu-panel {
-        display: block !important;
-        margin-top: 1.2rem !important;
-        background: #f2ebe9;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem:hover .p-megamenu-panel {
+    display: block !important;
+    margin-top: 1.2rem !important;
+    background: #f2ebe9;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
-        display: block;
-        margin-top: 1.2rem !important;
-        background: #f2ebe9;
-    }
+:host ::ng-deep .custom-menu .p-megamenu-root-list>.p-menuitem-active>.p-megamenu-panel {
+    display: block;
+    margin-top: 1.2rem !important;
+    background: #f2ebe9;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus {
-        border: none !important;
-        outline: none !important;
-        outline-offset: none !important;
-        box-shadow: none !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link:focus {
+    border: none !important;
+    outline: none !important;
+    outline-offset: none !important;
+    box-shadow: none !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus .p-menuitem-text {
-        color: #e99f4c !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link:focus .p-menuitem-text {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem > .p-menuitem-link:focus .p-submenu-icon {
-        color: #e99f4c !important;
-    }
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list>.p-menuitem>.p-menuitem-link:focus .p-submenu-icon {
+    color: #e99f4c !important;
+}
 
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
-        background: none !important;
-    }
-
-    div.transbox {       
-        filter: brightness(45%);
-    }
-
-    :host ::ng-deep .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
-        background-color: rgb(19 68 70) !important;
-    }
-
-
+:host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
+    background: none !important;
+}

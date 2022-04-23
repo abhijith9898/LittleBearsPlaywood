@@ -10,11 +10,18 @@ import { InputTextModule } from 'primeng/inputtext';
 import { FormsModule } from '@angular/forms';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { CarouselModule } from 'primeng/carousel';
+import { HomepageComponent } from './homepage/homepage.component';
+import { TermsAndPoliciesComponent } from './terms-and-policies/terms-and-policies.component';
+import { HowItWorksComponent } from './how-it-works/how-it-works.component';
+import {CardModule} from 'primeng/card';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent
+    TopBarComponent,
+    HomepageComponent,
+    TermsAndPoliciesComponent,
+    HowItWorksComponent
   ],
   imports: [
     BrowserModule,
@@ -25,7 +32,8 @@ import { CarouselModule } from 'primeng/carousel';
     InputTextModule,
     FormsModule,
     MegaMenuModule,
-    CarouselModule
+    CarouselModule,
+    CardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
