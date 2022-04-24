@@ -1,10 +1,61 @@
-<!-- <div class="container">
-  <router-outlet></router-outlet>
-</div> -->
+<!-- ---------------------TOP-MENU------------------------------------------ -->
+
+
+<div class="navbar">
+  <div class="logo">
+    <img src="assets/logo-border.png" height="80" style="float: left;margin-top: -1rem;" class="mr-2">
+    <span style="color: white;font-family: cursive;"><span
+        style="color:#d17400;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;"><b>LITTLE
+          BEARS PLAYWOOD</b></span><br>the play is underway</span>
+  </div>
+  <div class="menu-items">
+    <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/how-it-works']">How it works</a>
+  <div class="dropdown">
+    <button class="dropbtn">Toys
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Select based on Age</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <h3>1-2 year</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>2-5 year</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <h3>5+ year</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <a [routerLink]="['/policy']">Terms and Policies</a>
+  <a [routerLink]="['/about-us']">About Us</a>
+  </div>
+  <div class="shopping-icon">
+    <span><i class="pi pi-shopping-cart" style="font-size: 2rem; color: #d17400;"></i></span>
+  </div>
+</div>
+
+
+
+
 
 <!-- ---------------------TOP-MENU------------------------------------------ -->
 
-<div class="custom-menu">
+<!-- <div class="custom-menu">
   <p-megaMenu [model]="menuItems">
     <ng-template pTemplate="start">
       <div>
@@ -20,7 +71,7 @@
       </div>
     </ng-template>
   </p-megaMenu>
-</div>
+</div> -->
 
 <!--------------------------------SECTIONS----------------------------------------->
 
