@@ -1,6 +1,5 @@
-:host ::ng-deep .custom-menu .p-megamenu {
+/* :host ::ng-deep .custom-menu .p-megamenu {
     background: rgb(19 68 70) !important;
-    /* #1d342d !important  #264143*/
     border: none;
     display: flex !important;
     padding: 1.1rem !important;
@@ -41,18 +40,7 @@
     font-weight: 700 !important;
 }
 
-/* :host ::ng-deep .custom-menu .p-megamenu .p-menuitem-link .p-menuitem-text {
-        color: #495057 !important; 
-    } background: rgba(22, 35, 23, 0.52); */
 
-
-/* :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem .p-menuitem-active > .p-menuitem-link .p-menuitem-text {
-        color: #e99f4c !important;
-    }
-
-    :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-root-list > .p-menuitem .p-menuitem-active > .p-menuitem-link .p-submenu-icon {
-        color: #e99f4c !important;
-    } */
 
 :host ::ng-deep .custom-menu .p-megamenu .p-menuitem .p-menuitem-active {
     background: none !important;
@@ -66,9 +54,7 @@
     background: none !important;
 }
 
-/* :host ::ng-deep .custom-menu .p-megamenu-panel {
-        display: none !important;
-    } */
+
 
 :host ::ng-deep .custom-menu .p-megamenu-panel {
     display: none;
@@ -103,4 +89,131 @@
 
 :host ::ng-deep .custom-menu .p-megamenu .p-megamenu-submenu-header {
     background: none !important;
-}
+} */
+
+
+/*------------------------------------ new html megamenu--------------------------- */
+
+
+
+* {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+  }
+
+  .logo {
+      float: left;
+  }
+
+  .shopping-icon {
+      float: right;
+      margin-top: 1%;
+      cursor: pointer;
+  }
+  
+  .navbar {
+    overflow: hidden;
+    background-color: rgb(19 68 70);
+    font-family: Arial, Helvetica, sans-serif;    
+    padding: 28px;
+    display: flex;
+  }
+
+  .menu-items {
+    justify-content: center;
+    display: flex;
+    width: 75%;
+  }
+  
+  .navbar a {
+    /* font-size: 16px; */
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: larger !important;
+    font-weight: 500 !important;
+  }
+  
+  .dropdown {
+    overflow: hidden;
+  }
+  
+  .dropdown .dropbtn {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font: inherit;
+    margin: 0;
+    font-size: large !important;
+    font-weight: 500 !important;
+  }
+  
+  .navbar a:hover, .dropdown:hover .dropbtn {
+    
+    color:#ef8400
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+    top: 17%;
+  }
+  
+  .dropdown-content .header {
+    background: #ff9b23;
+    padding: 16px;
+    color: white;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: #f2ebe9;
+    height: 250px;
+  }
+  
+  .column a {
+    float: none;
+    color: black;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  .column a:hover {
+    background-color: #ddd;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      height: auto;
+    }
+  }

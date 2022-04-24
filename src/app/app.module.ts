@@ -14,6 +14,9 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { TermsAndPoliciesComponent } from './terms-and-policies/terms-and-policies.component';
 import { HowItWorksComponent } from './how-it-works/how-it-works.component';
 import {CardModule} from 'primeng/card';
+import { AboutUsComponent } from './about-us/about-us.component';
+import { ToyCatalogueComponent } from './toy-catalogue/toy-catalogue.component';
+//import {DataViewModule} from 'primeng/dataview';
 
 @NgModule({
   declarations: [
@@ -21,7 +24,9 @@ import {CardModule} from 'primeng/card';
     TopBarComponent,
     HomepageComponent,
     TermsAndPoliciesComponent,
-    HowItWorksComponent
+    HowItWorksComponent,
+    AboutUsComponent,
+    ToyCatalogueComponent
   ],
   imports: [
     BrowserModule,
@@ -33,7 +38,8 @@ import {CardModule} from 'primeng/card';
     FormsModule,
     MegaMenuModule,
     CarouselModule,
-    CardModule
+    CardModule,
+    //DataViewModule
   ],
   providers: [],
   bootstrap: [AppComponent]
