@@ -29,14 +29,14 @@ export class ToyCatalogueComponent implements OnInit {
         image: 'https://image.made-in-china.com/2f0j00oEvUgnQaaZzw/12V-Low-Price-Kids-Electric-Battery-Kids-Toys-Car-2019-Baby-Car-for-Children-Driving-Ride-on-Electric-Toy-Car-for-Kids-to-Drive.jpg'
       },
       {
-        breakpoint: 'Doll',
+        name: 'Doll',
         description: "Play",
         price: '2',
         inventoryStatus: 'IN STOCK',
         image: 'https://i.pinimg.com/originals/a9/5f/c0/a95fc0264ce57314a3c9f710d0d5a454.jpg'
       },
       {
-        breakpoint: 'Play Yard',
+        name: 'Play Yard',
         description: "Play",
         price: '4',
         inventoryStatus: 'IN STOCK',
@@ -59,6 +59,14 @@ export class ToyCatalogueComponent implements OnInit {
       {
         name: 'Musical Walker',
         description: "Musical Walker",
+        category: "Puzzle",
+        price: '8',
+        inventoryStatus: 'IN STOCK',
+        image: 'https://img.joomcdn.net/af5423c5b65f3521802e436da14df1aaf2807eb3_original.jpeg'
+      },
+      {
+        name: 'New Toy',
+        description: "New Toy",
         category: "Puzzle",
         price: '8',
         inventoryStatus: 'IN STOCK',
