@@ -1,28 +1,91 @@
-<!-- <div class="container">
-  <router-outlet></router-outlet>
-</div> -->
+<!-- ---------------------TOP-MENU------------------------------------------ -->
 
-<p-menubar [model]="items">
-  <ng-template pTemplate="start">
-      <img src="assets/logo.jpg" height="40" class="mr-2">
-  </ng-template>
-  <ng-template pTemplate="end">
-      <input type="text" pInputText placeholder="Search">
-  </ng-template>
-</p-menubar>
 
-<div class="grid grid-nogutter surface-section text-800">
-  <div style="background: #e9d2e7" class="col-12 md:col-6 p-6 text-center md:text-left flex align-items-center ">
-      <section>
-          <span class="block text-6xl font-bold mb-1" style="font-family:cursive;">We Spread Happiness</span>
-          <div class="text-6xl font-bold mb-3" style="font-family:cursive;color: #ef0081;">rent out best toys from us</div>
-          <p class="mt-0 mb-4 text-700 line-height-3" style="font-family:cursive;">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-          
-          <button pButton pRipple label="RENT NOW" type="button" style="background: #ef0081;color: azure;border: none;" class="mr-3 p-button-raised"></button>
-          <!-- <button pButton pRipple label="Live Demo" type="button" class="p-button-outlined"></button> -->
-      </section>
+<div class="navbar">
+  <div class="logo">
+    <img src="assets/logo-border.png" height="80" style="float: left;margin-top: -1rem;" class="mr-2">
+    <span style="color: white;font-family: cursive;"><span
+        style="color:#d17400;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;"><b>LITTLE
+          BEARS PLAYWOOD</b></span><br>the play is underway</span>
   </div>
-  <div style="background: #e9d2e7" class="col-12 md:col-6 overflow-hidden">
-      <img src="assets/child.jpg" alt="Image" class="md:ml-auto block md:h-full" style="clip-path: polygon(8% 0, 100% 0%, 100% 100%, 0 100%)">
+  <div class="menu-items">
+    <a [routerLink]="['/home']">Home</a>
+  <a [routerLink]="['/how-it-works']">How it works</a>
+  <div class="dropdown">
+    <button class="dropbtn">Toys
+      <i class="fa fa-caret-down"></i>
+    </button>
+    <div class="dropdown-content">
+      <div class="header">
+        <h2>Select based on Age</h2>
+      </div>   
+      <div class="row">
+        <div class="column">
+          <!-- <h3>1-2 year</h3> -->
+          <a href="#">1-2 year</a>
+          <a href="#">2-5 year</a>
+          <a href="#">5+ year</a>
+        </div>
+        <div class="column">
+          <!-- <h3>2-5 year</h3> -->
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a>
+        </div>
+        <div class="column">
+          <!-- <h3>5+ year</h3>
+          <a href="#">Link 1</a>
+          <a href="#">Link 2</a>
+          <a href="#">Link 3</a> -->
+        </div>
+      </div>
+    </div>
+  </div> 
+  <a [routerLink]="['/policy']">Terms and Policies</a>
+  <a [routerLink]="['/about-us']">About Us</a>
+  </div>
+  <div class="shopping-icon">
+    <span><i class="pi pi-shopping-cart" style="font-size: 2rem; color: #d17400;"></i></span>
   </div>
 </div>
+
+
+
+
+
+<!-- ---------------------TOP-MENU------------------------------------------ -->
+
+<!-- <div class="custom-menu">
+  <p-megaMenu [model]="menuItems">
+    <ng-template pTemplate="start">
+      <div>
+        <img src="assets/logo-border.png" height="80" style="float: left;margin-top: -1rem;" class="mr-2">
+        <span style="color: white;font-family: cursive;"><span
+            style="color:#d17400;font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;"><b>LITTLE
+              BEARS PLAYWOOD</b></span><br>the play is underway</span>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="end">
+      <div>
+        <span><i class="pi pi-shopping-cart" style="font-size: 2rem; color: #d17400;"></i></span>
+      </div>
+    </ng-template>
+  </p-megaMenu>
+</div> -->
+
+<!--------------------------------SECTIONS----------------------------------------->
+
+
+<div class="container">
+  <router-outlet></router-outlet>
+</div>
+
+<!-- ---------------------FOOTER------------------------------------------ -->
+
+<footer>
+  <div>
+    <div class="footer">
+      <h2 style="font-family: sans-serif;font-weight: 800;padding-top: 30px;">Little Bears Playwood</h2>
+    </div>
+  </div>
+</footer>

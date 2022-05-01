@@ -1,2 +1,184 @@
 /* You can add global styles to this file, and also import other style files */
 @import "primeflex/primeflex.css";
+
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+
+/* .ques-slider body{
+ 	margin:0;
+ 	font-family: 'Poppins', sans-serif;
+ 	font-weight: 400;
+ }
+
+ .ques-slider *{
+ 	box-sizing: border-box;
+ } */
+
+ @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+
+
+.footer {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 500px;
+    background-color: rgb(19 68 70);
+    color: white;
+    text-align: center;
+}
+
+.quote-section {
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 255, 255);
+    padding: 10rem;
+    /* color: rgb(42, 134, 113);
+    text-align: center;
+    font-size: xx-large;    
+    font-weight: bold;
+    font-family: cursive; */
+    background-image: url("src/assets/bg-light.jpg");
+    background-size: cover;
+ 	background-position: center;
+}
+
+.quote-text {
+    color: rgb(42, 134, 113);
+    text-align: center;
+    font-size: xx-large;    
+    font-weight: bold;
+    font-family: cursive; 	
+ 	/* background-color: rgba(0,0,0,0.8);     */
+     width: 100%;
+    height: 600px;
+ 	z-index: 1;
+}
+
+.product-item .product-item-content {
+    border: 1px solid var(--surface-d);
+    border-radius: 3px;
+    margin: 5.3rem;
+    text-align: center;
+    padding: 3rem 0;
+    height: 26rem;
+}
+
+.product-item .product-image {
+    width: 50%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)
+}
+
+
+
+div.transbox {
+    filter: brightness(45%);
+}
+
+:host ::ng-deep .custom-carousel .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+    background-color: rgb(19 68 70) !important;
+}
+
+/*-----------question-slider--------------*/
+
+
+
+
+
+
+
+
+
+ .ques-slider .container{
+ 	max-width: 1170px;
+ 	width: 100%;
+ 	margin:auto;
+ }
+
+ .ques-slider .home{
+ 	height: 100vh;
+ 	background-image: url("assets/bg1.jpg");
+ 	background-size: cover;
+ 	background-position: center;
+ 	display: flex;
+ 	flex-wrap: wrap;
+ 	padding:50px 15px;
+ 	position: relative;
+ }
+ .ques-slider .home::before{
+ 	content: '';
+ 	position: absolute;
+ 	left:0;
+ 	top:0;
+ 	width: 100%;
+ 	height: 100%;
+ 	background-color: rgba(0,0,0,0.8);
+ 	z-index: 1;
+ }
+
+ .ques-slider .home .home-text{
+ 	text-align: center;
+ 	position: relative;
+ 	z-index: 2;
+ }
+
+ .ques-slider .home .home-text h1{
+	/* color:#ffffff; */
+	font-size: 50px;
+	color:#ef8400 !important;
+	font-family: cursive;
+	line-height: 56px;
+	font-weight: 700;
+	margin:0 0 20px;
+	padding-top: 2rem;
+}
+.ques-slider .home .home-text p{
+	margin:0;
+	overflow: hidden;
+}
+.ques-slider .home .home-text p span{
+    font-size: 40px;
+	font-family: cursive;
+    color:rgb(255, 255, 255);
+    font-weight: 700;
+    display: inline-block;
+    line-height: 46px;
+    display: none;
+}
+
+.ques-slider .home .home-text p span.text-in{
+	display: block;
+	animation: textIn .5s ease;
+}
+.ques-slider .home .home-text p span.text-out{
+	animation: textOut .5s ease;
+}
+
+
+	@keyframes textIn{
+		0%{
+			transform: translateY(100%);
+		}
+		100%{
+			transform: translateY(0%);
+		}
+	}
+	@keyframes textOut{
+		0%{
+			transform: translateY(0%);
+		}
+		100%{
+			transform: translateY(-100%);
+	
+		}
+	}
+
+
+
+
+
+
+
+
+
