@@ -4,10 +4,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { MenubarModule } from 'primeng/menubar';
-//import {MenuItem} from 'primeng/api';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
-import { FormsModule } from '@angular/forms';
 import { MegaMenuModule } from 'primeng/megamenu';
 import { CarouselModule } from 'primeng/carousel';
 import { HomepageComponent } from './homepage/homepage.component';
@@ -24,6 +22,13 @@ import { DialogModule } from 'primeng/dialog';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { AddToysCatelogueComponent } from './add-toys-catelogue/add-toys-catelogue.component';
+import { FileUploadModule } from 'primeng/fileupload';
+import {ToastModule} from 'primeng/toast';
+import {MessagesModule} from 'primeng/messages';
+import {MessageModule} from 'primeng/message';
+import {TableModule} from 'primeng/table';
 
 @NgModule({
   declarations: [
@@ -33,14 +38,14 @@ import { HttpClientModule } from '@angular/common/http';
     TermsAndPoliciesComponent,
     HowItWorksComponent,
     AboutUsComponent,
-    ToyCatalogueComponent
+    ToyCatalogueComponent,
+    AddToysCatelogueComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     MenubarModule,
     ButtonModule,
-    //MenuItem,
     InputTextModule,
     FormsModule,
     MegaMenuModule,
@@ -54,6 +59,12 @@ import { HttpClientModule } from '@angular/common/http';
     RippleModule,
     HttpClientModule,
     RatingModule,
+    ReactiveFormsModule,
+    FileUploadModule,
+    ToastModule,
+    MessagesModule,
+    MessageModule,
+    TableModule
   ],
   providers: [],
   bootstrap: [AppComponent]
