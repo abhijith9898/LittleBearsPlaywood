@@ -15,6 +15,92 @@
  } */
 
  @import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,800,900&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap');
+ @import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Fredoka One', cursive;
+}
+
+.showcase {
+	position: absolute;
+	right: 0;
+	width: 100%;
+	min-height: 100vh;
+	padding: 200px;
+	/* display: flex; */
+	/* justify-content: space-between; */
+	align-items: center;
+	/* background: #111; */
+	color: #fff;
+	z-index: 2;
+}
+
+.text h2 {
+	font-size: 2em;
+	font-weight: 500;
+	line-height: 1em;
+	/* text-transform: uppercase; */
+}
+
+.text h3 {
+	font-size: 3em;
+	font-weight: 700;
+	line-height: 1.1em;
+	text-transform: uppercase;
+}
+
+.showcase button {
+	background: #db7900;
+	color: #ffff;
+	border: none;
+	margin-top: 2%;
+}
+
+.showcase .p-button:enabled:hover {
+	background: #b96907;
+	color: #ffff;
+	border: none;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.p-carousel-header {
+	text-align: center;
+}
+
+.p-carousel-footer {
+	text-align: center;
+}
+
+.p-carousel-footer button {
+	background: #db7900;
+	color: #ffff;
+	border: none;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.p-carousel-footer .p-button:enabled:hover {
+	background: #b96907;
+	color: #ffff;
+	border: none;
+	margin-top: 2%;
+	margin-bottom: 2%;
+}
+
+.custom-carousel .p-carousel .p-carousel-indicators .p-carousel-indicator .p-highlight button {
+	background-color: rgb(19 68 70);
+}
+
+.custom-carousel{
+	filter: brightness(86%);
+	background-image: url("src/assets/bg-light.jpg");
+    background-size: cover;
+    background-position: center;
+}
 
 
 .footer {
@@ -62,7 +148,8 @@
     margin: 5.3rem;
     text-align: center;
     padding: 3rem 0;
-    height: 26rem;
+	background: white;
+    height: 19rem;
 }
 
 .product-item .product-image {
@@ -71,14 +158,13 @@
 }
 
 
-
 div.transbox {
     filter: brightness(45%);
 }
 
-:host ::ng-deep .custom-carousel .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
+/* :host ::ng-deep .custom-carousel .p-carousel .p-carousel-indicators .p-carousel-indicator.p-highlight button {
     background-color: rgb(19 68 70) !important;
-}
+} */
 
 /*-----------question-slider--------------*/
 

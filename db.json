@@ -1,0 +1,32 @@
+{
+  "toys": [
+      {
+          "name": "RC Car",
+          "description": "Ride",
+          "price": "1",
+          "inventoryStatus": "IN STOCK",
+          "image": "https://image.made-in-china.com/2f0j00oEvUgnQaaZzw/12V-Low-Price-Kids-Electric-Battery-Kids-Toys-Car-2019-Baby-Car-for-Children-Driving-Ride-on-Electric-Toy-Car-for-Kids-to-Drive.jpg"
+      },
+      {
+          "name": "RC Car",
+          "description": "Ride",
+          "price": "1",
+          "inventoryStatus": "IN STOCK",
+          "image": "https://image.made-in-china.com/2f0j00oEvUgnQaaZzw/12V-Low-Price-Kids-Electric-Battery-Kids-Toys-Car-2019-Baby-Car-for-Children-Driving-Ride-on-Electric-Toy-Car-for-Kids-to-Drive.jpg"
+      },
+      {
+          "name": "RC Car",
+          "description": "Ride",
+          "price": "1",
+          "inventoryStatus": "IN STOCK",
+          "image": "https://image.made-in-china.com/2f0j00oEvUgnQaaZzw/12V-Low-Price-Kids-Electric-Battery-Kids-Toys-Car-2019-Baby-Car-for-Children-Driving-Ride-on-Electric-Toy-Car-for-Kids-to-Drive.jpg"
+      },
+      {
+          "name": "RC Car",
+          "description": "Ride",
+          "price": "1",
+          "inventoryStatus": "IN STOCK",
+          "image": "https://image.made-in-china.com/2f0j00oEvUgnQaaZzw/12V-Low-Price-Kids-Electric-Battery-Kids-Toys-Car-2019-Baby-Car-for-Children-Driving-Ride-on-Electric-Toy-Car-for-Kids-to-Drive.jpg"
+      }
+  ]
+}

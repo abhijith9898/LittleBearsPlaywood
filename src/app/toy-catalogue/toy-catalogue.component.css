@@ -88,6 +88,14 @@
     font-weight: 600;
 }
 
+:host ::ng-deep .product-grid-item .p-grid {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -0.5rem;
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+}
+
 
 
 .card {

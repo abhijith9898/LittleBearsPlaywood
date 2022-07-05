@@ -1,23 +1,23 @@
 <!-- ---------------------COVER------------------------------------------ -->
 
-<div class="grid grid-nogutter surface-section text-800">
-    <div class="col-12 md:col-12 overflow-hidden">
-      <div class="transbox">
-        <img src="assets/child.jpg" alt="Image" style="margin-top: -3%;object-fit: cover;height: 745px;"
-          class="md:ml-auto block md:w-full">
+<div class="p-col-12 p-md-12 p-lg-12 p-grid p-nogutter text-800" style="padding: 0;">
+  <div class="p-col-12 p-md-12 p-lg-12 overflow-hidden">
+    <div class="showcase">
+      <div class="text">
+        <h2>The Library Of Your Dreams</h2>
+        <h3>At Your Doorstep</h3>
       </div>
-      <div style="position: absolute;top: 40%;left: 6%;">
-        <div class="text-6xl font-bold mb-3"
-          style="font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Helvetica, Arial, sans-serif, Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol;color: #ffffff;">
-          The library of your dreams <br>at
-          your doorstep</div>
-        <!-- <div class="text-6xl font-bold mb-3" style="color: #ffffff;"><b>THE LIBRARY OF YOUR DREAMS <br>AT
-            YOUR DOORSTEP</b></div> -->
-        <button pButton pRipple label="View Catalogue" type="button" [routerLink]="['/catalogue']"
-          style="background: #db7900;color: #ffff;border: none; margin-top: 7%;" class="mr-3 p-button-raised"></button>
+      <div>
+        <button pButton pRipple label="See Toys" type="button" [routerLink]="['/catalogue']"
+          class="mr-3 p-button-raised"></button>
       </div>
     </div>
+    <div class="transbox">
+      <img class="p-col-12 p-md-12 p-lg-12" src="assets/child.jpg" alt="Image"
+        style="object-fit: cover;height: 710px; padding: 0;">
+    </div>
   </div>
+</div>
   
   <!-- ---------------------HOME-CONTENT----ff0d86-------------------------------------- -->
   
@@ -26,8 +26,8 @@
     <!-- ----------------------Quote-section------------------------------------------ -->
   
     <div class="grid grid-nogutter">
-      <div class="quote-section col-12 md:col-12 lg:col-12">
-        <div class="quote-text col-12 md:col-12 lg:col-12">
+      <div class="quote-section p-col-12 p-md-12 p-lg-12">
+        <div class="quote-text p-col-12 p-md-12 p-lg-12">
           <p style="padding-top: 8%;">
             You say that you love your children,<br>
             And are concerned that they learn today,<br>
@@ -50,8 +50,6 @@
               <span>Have you noticed that your child’s attachment to toys is often transient?</span>
               <span>Would you like to save money and still give your sweethearts a wonderful time?</span>
               <span>Are you concerned about the deteriorating environment that your kids should lead someday?</span>
-              <!-- <span>Stay At Home</span>
-                       <span>Avoid Close Contact</span> -->
             </p>
             <h1>Little Bear’s Playwood is your destination!</h1>
           </div>
@@ -64,31 +62,29 @@
   
   <!-- ----------------------TOYS-SAMPLE-CAROUSEL------------------------------------------ -->
   
-  <p-carousel [value]="products" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
+  <p-carousel [value]="newAddedToys" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
     [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
-    <!-- <ng-template pTemplate="header">
-        <h5>Circular, AutoPlay, 3 Items per Page and Scroll by 1</h5>
-      </ng-template> -->
-    <ng-template let-product pTemplate="item">
+    <ng-template pTemplate="header">
+      <h2 style="font-family: sans-serif;font-size: 3em;font-weight: 900;padding-top: 30px;color: rgb(42, 134, 113);">Latest Collection..</h2>
+    </ng-template>
+    <ng-template let-toy pTemplate="item">
       <div class="product-item">
         <div class="product-item-content">
           <div class="mb-3">
-            <img src="{{product.image}}" [alt]="product.name" class="product-image" />
+            <img src="{{toyUrlHead + toy.toyimage}}" [alt]="toy.name" class="product-image" />
           </div>
           <div>
-            <h4 class="mb-1">{{product.name}}</h4>
-            <h6 class="mt-0 mb-3">${{product.price}}</h6>
-            <span
-              [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{product.inventoryStatus}}</span>
-            <div class="car-buttons mt-5">
-              <p-button type="button" styleClass="p-button p-button-rounded mr-2" icon="pi pi-search"></p-button>
-              <p-button type="button" styleClass="p-button-success p-button-rounded mr-2" icon="pi pi-star-fill">
-              </p-button>
-              <p-button type="button" styleClass="p-button-help p-button-rounded" icon="pi pi-cog"></p-button>
-            </div>
+            <h4 class="mb-1">{{toy.toyname}}</h4>
+            <!-- <h6 class="mt-0 mb-3">${{toy.price}}</h6> -->
+            <!-- <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{toy.inventoryStatus}}</span> -->
+            <span style="color: green;">IN STOCK</span>
           </div>
         </div>
       </div>
+    </ng-template>
+    <ng-template pTemplate="footer">
+      <button pButton pRipple label="View More.." type="button" [routerLink]="['/catalogue']"
+          class="mr-3 p-button-raised"></button>
     </ng-template>
   </p-carousel>
   
