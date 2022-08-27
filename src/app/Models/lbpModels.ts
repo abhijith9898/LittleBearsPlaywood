@@ -1,3 +1,5 @@
+
+
 export class Membership {
     
     memberid: number;
@@ -23,6 +25,9 @@ export class ToyType {
     currentavailability: number;
     toyimage: string;
     toydescription: string;
+    categoryid: number;
+    isTobeDeleted: number;
+    Message: any;
 }
 
 export class ToysCategory {

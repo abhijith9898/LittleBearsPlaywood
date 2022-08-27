@@ -9,8 +9,10 @@ import { ToysCategory } from 'src/app/Models/lbpModels';
 })
 export class LittlebearServiceService {
 
-  API = "https://localhost:44386";
-  //API = "http://webapi.littlebearsplaywood.com"
+  //API = "https://localhost:44386";
+  API = "http://webapi.littlebearsplaywood.com"
+
+
 
   constructor(private http: HttpClient) { }
 
@@ -18,9 +20,32 @@ export class LittlebearServiceService {
     return this.http.get<Membership[]>(this.API + '/api/MembershipData');
   }
 
-  public addToysCatelogue(formData) {
-    return this.http.post<ToyType>(this.API + '/api/uploadImage', formData);      
+  public addToysCatelogue(toysData) {
+    
+    // let toy: ToyType[] = [{
+    //   toytypeid: 94,
+    //   warranty: 2,
+    //   price: 24,
+    //   toyname: 'naa new toy 8',
+    //   numberoftoys: 2,
+    //   manufacturer: 'aaa',
+    //   currentavailability: 2,
+    //   toyimage: 'string',
+    //   toydescription: 'new description 8',
+    //   categoryid: 1,
+    //   isTobeDeleted: 0,
+    //   Message:''
+    // }];
+  
+    //return this.http.post<ToyType>(this.API + '/api/uploadImage', formData); 
+    //return this.http.post<ToyType>(this.API + '/api/updateToy', toy.filter(x=>x.toytypeid==2)); 
+    return this.http.post<ToyType>(this.API + '/api/updateToy', toysData); 
   }
+
+  public uploadImage(formData) {
+    return this.http.post<ToyType>(this.API + '/api/uploadImage', formData); 
+  }
+  
 
   public getToysCatelogue() {
     return this.http.get<ToyType[]>(this.API + '/api/toytypedata');      

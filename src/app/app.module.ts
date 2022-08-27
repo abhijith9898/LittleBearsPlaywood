@@ -1,8 +1,7 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { TopBarComponent } from './top-bar/top-bar.component';
 import { MenubarModule } from 'primeng/menubar';
 import { ButtonModule } from 'primeng/button';
 import { InputTextModule } from 'primeng/inputtext';
@@ -22,18 +21,24 @@ import { DialogModule } from 'primeng/dialog';
 import { RatingModule } from 'primeng/rating';
 import { RippleModule } from 'primeng/ripple';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AddToysCatelogueComponent } from './add-toys-catelogue/add-toys-catelogue.component';
 import { FileUploadModule } from 'primeng/fileupload';
 import {ToastModule} from 'primeng/toast';
 import {MessagesModule} from 'primeng/messages';
 import {MessageModule} from 'primeng/message';
 import {TableModule} from 'primeng/table';
+import {TooltipModule} from 'primeng/tooltip';
+import { ProgressSpinnerModule } from 'primeng/progressspinner';
+import {ConfirmDialogModule} from 'primeng/confirmdialog';
+import {ConfirmationService} from 'primeng/api';
+import {ConfirmPopupModule} from 'primeng/confirmpopup';
+import { MessageService } from 'primeng/api';
+import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
     AppComponent,
-    TopBarComponent,
     HomepageComponent,
     TermsAndPoliciesComponent,
     HowItWorksComponent,
@@ -64,9 +69,14 @@ import {TableModule} from 'primeng/table';
     ToastModule,
     MessagesModule,
     MessageModule,
-    TableModule
+    TableModule,
+    TooltipModule,
+    ProgressSpinnerModule,
+    ConfirmDialogModule,
+    ConfirmPopupModule
+
   ],
-  providers: [],
+  providers: [MessageService,ConfirmationService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,7 +1,14 @@
-<!-- <p-toast position="top-right"></p-toast> -->
+<p-toast [baseZIndex]="9999999" position="top-right"></p-toast>
+<div>    
+    <p-button *ngIf="!isEditMode" class="view-edit-icon" icon="pi pi-pencil" styleClass="p-button-lg" (click)="onEditclick()"
+    pTooltip="Edit" tooltipPosition="left"></p-button>
+
+    <p-button *ngIf="isEditMode" class="view-edit-icon" icon="pi pi-times" styleClass="p-button-lg" (click)="onCancelclick()"
+    pTooltip="Discard" tooltipPosition="left"></p-button>
+</div>
 <div class="p-fluid">
     <div class="p-grid">
-        <div class="p-col-12 p-md-12 p-lg-12">
+        <!-- <div class="p-col-12 p-md-12 p-lg-12">
             <div class="p-formgrid">
                 <div class="p-col-12 p-md-12 p-lg-12 no-padding">
                     <p-panel [style]="{width: '100%', height: '100%'}">
@@ -9,13 +16,17 @@
                             <span class="panel-header"><b>ADD NEW TOYS</b></span>
                         </ng-template>
                         <form [formGroup]="myForm" (ngSubmit)="submit()">
-                            <div class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
-                                <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row" style="padding-bottom: 0px;padding-top: 0px;">
+                            <div
+                                class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
+                                <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row"
+                                    style="padding-bottom: 0px;padding-top: 0px;">
                                     <div class="p-col-12 p-md-6 p-lg-3 label-align">
                                         <b>Toy Name </b>
                                     </div>
-                                    <div class="p-col-12 p-md-6 p-lg-9 p-d-flex p-flex-column p-flex-md-row no-side-padding">                                
-                                        <input formControlName="name" id="name" type="text" class="form-control" pInputText placeholder="Toy Name" trim="blur" />                                
+                                    <div
+                                        class="p-col-12 p-md-6 p-lg-9 p-d-flex p-flex-column p-flex-md-row no-side-padding">
+                                        <input formControlName="name" id="name" type="text" class="form-control"
+                                            pInputText placeholder="Toy Name" trim="blur" />
                                     </div>
                                 </div>
                             </div>
@@ -24,134 +35,175 @@
                                 <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row">
                                     <div class="p-col-12 p-md-6 p-lg-3"><b>Description</b></div>
                                     <div class="p-col-12 p-md-6 p-lg-9">
-                                        <input formControlName="description" id="description" type="text" pInputText placeholder="Description" trim="blur" />
+                                        <input formControlName="description" id="description" type="text" pInputText
+                                            placeholder="Description" trim="blur" />
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
+                            <div
+                                class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
                                 <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row">
                                     <div class="p-col-12 p-md-6 p-lg-3">
                                         <b>Category</b>
                                     </div>
                                     <div class="p-col-12 p-md-6 p-lg-9">
-                                        <p-dropdown formControlName="category" (onChange)="onChangeCategory()" [options]="categoryList" [(ngModel)]="selectedCategory" placeholder="Category" optionLabel="agegroup"></p-dropdown>
+                                        <p-dropdown formControlName="category" (onChange)="onChangeCategory()"
+                                            [options]="categoryList" [(ngModel)]="selectedCategory"
+                                            placeholder="Category" optionLabel="agegroup"></p-dropdown>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
+                            <div
+                                class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
                                 <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row">
                                     <div class="p-col-12 p-md-6 p-lg-3">
                                         <b>Warranty</b>
                                     </div>
                                     <div class="p-col-12 p-md-6 p-lg-9">
-                                        <input formControlName="warranty" id="warranty" type="text" pInputText placeholder="Warranty" trim="blur" />
+                                        <input formControlName="warranty" id="warranty" type="text" pInputText
+                                            placeholder="Warranty" trim="blur" />
                                     </div>
                                 </div>
                             </div>
-                            <div  class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
+                            <div
+                                class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
                                 <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row">
                                     <div class="p-col-12 p-md-6 p-lg-3">
                                         <b>Image</b>
                                     </div>
                                     <div class="card p-col-12 p-md-6 p-lg-9">
-                                        <!-- <p-fileUpload name="myfile[]" [customUpload]="true" (uploadHandler)="onFileChange($event)"></p-fileUpload> -->
-                                        <p-fileUpload #imageupload name="myfile[]" (uploadHandler)="onFileChange($event,imageupload)" customUpload="true" multiple="multiple" accept="image/*"
-                                            maxFileSize="1000000">
+                                        
+                                        <p-fileUpload #imageupload name="myfile[]"
+                                            (uploadHandler)="onFileChange($event,imageupload)" customUpload="true"
+                                            multiple="multiple" accept="image/*" maxFileSize="1000000">
                                             <ng-template pTemplate="content">
                                                 <ul *ngIf="uploadedFiles.length">
-                                                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+                                                    <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}}
+                                                        bytes</li>
                                                 </ul>
                                             </ng-template>
                                         </p-fileUpload>
                                     </div>
                                 </div>
                             </div>
-                            <div class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
+                            <div
+                                class="p-col-12 p-md-12 p-lg-12 p-d-flex p-flex-column p-flex-md-row no-side-padding form-centre">
                                 <div class="p-col-12 p-md-6 p-lg-8 p-d-flex p-flex-column p-flex-md-row">
                                     <div class="p-col-12 p-md-6 p-lg-3"></div>
                                     <div class="p-col-12 p-md-6 p-lg-9">
-                                        <button pButton type="submit" icon="pi pi-check" label="ADD" tooltipPosition="left" class="pi-button-primary"
-                                            style="max-width: 100px;float: right;margin-right: 2px;"></button>                                
-                                        <button pButton type="button" (click)="formClear()" icon="pi pi-times" label="CLEAR" tooltipPosition="left" class="p-button-danger"
+                                        <button pButton type="submit" icon="pi pi-check" label="ADD"
+                                            tooltipPosition="left" class="pi-button-primary"
+                                            style="max-width: 100px;float: right;margin-right: 2px;"></button>
+                                        <button pButton type="button" (click)="formClear()" icon="pi pi-times"
+                                            label="CLEAR" tooltipPosition="left" class="p-button-danger"
                                             style="max-width: 100px;float: right;margin-right: 2px;"></button>
                                     </div>
                                 </div>
                             </div>
-                        </form>                        
+                        </form>
                     </p-panel>
                 </div>
             </div>
-        </div>
-        <!-- <div class="p-col-12 p-md-12 p-lg-12">
-            <div class="card">    
-                <p-table [value]="dataSource" dataKey="id" editMode="row">
-                    <ng-template pTemplate="header">
-                        <tr>
-                            <th>Toy Name</th>
-                            <th>Category</th>
-                            <th>Description</th>
-                            <th>Warranty</th>
-                            <th style="width:8rem"></th>
-                        </tr>
-                    </ng-template>
-                    <ng-template pTemplate="body" let-element let-editing="editing" let-ri="rowIndex">
-                        <tr [pEditableRow]="element">
-                            <td>
-                                <p-cellEditor>
-                                    <ng-template pTemplate="input">
-                                        <input pInputText type="text" [(ngModel)]="element.fullName">
-                                    </ng-template>
-                                    <ng-template pTemplate="output">
-                                        {{element.fullName}}
-                                    </ng-template>
-                                </p-cellEditor>
-                            </td>
-                            <td>
-                                <p-cellEditor>
-                                    <ng-template pTemplate="input">
-                                        <input pInputText type="text" [(ngModel)]="element.address" required>
-                                    </ng-template>
-                                    <ng-template pTemplate="output">
-                                        {{element.address}}
-                                    </ng-template>
-                                </p-cellEditor>
-                            </td>
-                            <td>
-                                <p-cellEditor>
-                                    <ng-template pTemplate="input">
-                                        <input pInputText type="text" [(ngModel)]="element.email">
-                                    </ng-template>
-                                    <ng-template pTemplate="output">
-                                        {{element.email}}
-                                    </ng-template>
-                                </p-cellEditor>
-                            </td>
-                            <td>
-                                <p-cellEditor>
-                                    <ng-template pTemplate="input">
-                                        <input pInputText type="text" [(ngModel)]="element.phone">
-                                    </ng-template>
-                                    <ng-template pTemplate="output">
-                                        {{element.phone}}
-                                    </ng-template>
-                                </p-cellEditor>
-                            </td>
-                            <td style="text-align:center">
-                                <button *ngIf="!editing" pButton pRipple type="button" pInitEditableRow icon="pi pi-pencil"
-                                    (click)="onClickEdit(element)" class="p-button-rounded p-button-text"></button>
-                                <button *ngIf="!editing" pButton pRipple type="button" icon="pi pi-trash"
-                                    (click)="onClickDelete(element.id)" class="p-button-rounded p-button-text p-button-danger"></button>
-                                <button *ngIf="editing" pButton pRipple type="button" pSaveEditableRow icon="pi pi-check"
-                                    (click)="onClickSave(element)"
-                                    class="p-button-rounded p-button-text p-button-success p-mr-2"></button>
-                                <button *ngIf="editing" pButton pRipple type="button" pCancelEditableRow icon="pi pi-times"
-                                    (click)="onClickCancel(element, ri)"
-                                    class="p-button-rounded p-button-text p-button-danger"></button>
-                            </td>
-                        </tr>
-                    </ng-template>
-                </p-table>
-            </div>
         </div> -->
+        <div class="p-col-12 p-md-12 p-lg-12">
+            <p-panel header="TOY DETAILS" toggler="header" styleClass="small-panel" [toggleable]="true">
+                <span *ngIf="isEditMode" class="deleteIcon ct-delete-ic" (click)="addNewRow('focus')" pTooltip="Add New Toy" tooltipPosition="left">
+                    <i class="material-icons">add</i>
+                </span>
+                <div class="p-col-12 p-md-12 p-lg-12 no-side-padding">
+                    <p-table [value]="toysList" [scrollable]="true" scrollHeight="390px" [responsive]="true">
+            
+                        <ng-template pTemplate="header">
+                            <tr>
+                                <th><b>TOY NAME</b></th>
+                                <th><b>DESCRIPTION</b></th>
+                                <th><b>CATEGORY</b></th>
+                                <th><b>WARRANTY</b></th>
+                                <th><b>IMAGE</b></th>
+                            </tr>
+                        </ng-template>
+            
+                        <ng-template pTemplate="body" let-i="rowIndex" let-toy let-row="row">
+                            <tr *ngIf="toysList.length !== 0">
+                                <td>
+                                    <input [(ngModel)]="toy.toyname" id="row{{i+1}}" (ngModelChange)=textChange(toy) id="name" type="text" class="form-control" pInputText
+                                        placeholder="Toy Name" trim="blur" [disabled]="!isEditMode"/>
+                                </td>
+                                <td>
+                                    <input [(ngModel)]="toy.toydescription" (ngModelChange)=textChange(toy)  id="description" type="text" pInputText
+                                        placeholder="Description" trim="blur" [disabled]="!isEditMode"/>
+                                </td>
+                                <td>
+                                    <p-dropdown [appendTo]="'body'" (onChange)="onChangeCategory(toy)" [options]="categoryList"
+                                        [(ngModel)]="toy.category" placeholder="Category" optionLabel="agegroup" [disabled]="!isEditMode"></p-dropdown>
+                                    <!-- <p-dropdown [baseZIndex]="999999" filter="true" [appendTo]="'body'"
+                                            inputId="{{i+'qualificationId'}}" [disabled]="!isEditMode"
+                                            (onChange)="changeQuali(qualification)" [options]="qualifications"
+                                            [(ngModel)]="qualification.qualification" optionLabel="qualificationname"
+                                            [placeholder]="isEditMode ? 'Choose' : '-'"></p-dropdown> -->
+                                </td>
+                                <td>
+                                    <input [(ngModel)]="toy.warranty" (ngModelChange)=textChange(toy)  id="warranty" type="text" pInputText placeholder="Warranty"
+                                        trim="blur" [disabled]="!isEditMode" />
+                                    <!-- <textarea *ngIf="isEditMode" id="{{i+'remark'}}" (change)=textChangeQuali(qualification)
+                                            [disabled]="!isEditMode" rows="1" cols="30" pInputTextarea
+                                            [(ngModel)]="qualification.remarks" trim="blur" autoResize="autoResize" [maxlength]="95"
+                                            [placeholder]="isEditMode ? 'Major / Remarks' : '-'"></textarea> -->
+            
+                                    <!-- <span *ngIf="!isEditMode" style="word-break: break-all;">{{qualification.remarks ||
+                                            '-'}}</span> -->
+                                </td>
+                                <td >
+            
+                                    <div style="float: left;position: relative;width: calc(100% - 30px);">
+                                            <p-fileUpload id="{{i+'toyAttach'}}" #fileUp [disabled]="!isEditMode"
+                                                *ngIf="toy.toyimage===undefined || toy.toyimage===''"
+                                                chooseIcon="pi" chooseLabel="Choose File" pTooltip="Choose File" mode="basic"
+                                                [auto]="true" customUpload="true" (onSelect)="onFileSelect($event,toy)"
+                                                (uploadHandler)="onToyImageUpload($event,fileUp,toy)">
+                                            </p-fileUpload>
+                                            <ng-template [ngIf]="toy.toyimage!==undefined && toy.toyimage!==''">
+                                                <div class="p-d-flex">
+                                                    <b class="p-d-inline-flex p-ml-2">
+                                                        <a class="t-link eeg-file-name-seg p-my-auto"
+                                                            pTooltip="{{toy.fileName}}"
+                                                            (click)="toggleMenu(menu,$event,toy)">
+                                                            {{toy.fileName!==undefined &&
+                                                                toy.fileName!==''?toy.fileName:''}} </a>
+                                                    </b>
+                                                    <p-menu #menu [popup]="true" [model]="items" [appendTo]="'body'"></p-menu>
+                                                    <div class="p-d-inline-flex" *ngIf="isEditMode">
+                                                        <i class="material-icons cancel-btn-file p-mb-auto" aria-hidden="true"
+                                                            (click)="cancelfiledown(toy)">highlight_off</i>
+                                                    </div>&nbsp;
+                                                </div>
+                                            </ng-template>
+                                        </div>
+                                </td>
+                                <td style="width: 5%;">
+                                        <span *ngIf="isEditMode" class="deleteIcon" style="cursor: pointer;float:right;"
+                                            (click)="deleteRow(toy)"
+                                            pTooltip="{{toy.toytypeid !== '' &&  toy.toytypeid !== undefined ? 'Delete' : 'Discard'}}"
+                                            tooltipPosition="left"><i class="material-icons">{{toy.toytypeid !== '' && toy.toytypeid !== undefined ?
+                                                'delete' : 'clear'}} </i></span>                     
+                                    
+                                </td>
+                            </tr>
+                        </ng-template>
+                    </p-table>
+                </div>
+            </p-panel>
+            <div class="toysave">
+                <button pButton type="button" icon="pi pi-save" [disabled]="!isEditMode" (click)="save()" label="Save"
+                    tooltipPosition="left" class="p-button-primary" pTooltip="Save Changes" tooltipPosition="left"></button>            
+            </div>
+        </div>       
+
     </div>
 </div>
+
+<div *ngIf="isSpinner" class="pageload">
+    <p-progressSpinner [style]="{width: '50px', height: '50px'}" strokeWidth="6" fill="#EEEEEE" animationDuration=".5s">
+    </p-progressSpinner>
+</div>
+<p-confirmDialog [style]="{width: '50vw'}" header="Confirmation" icon="pi pi-exclamation-triangle"></p-confirmDialog>
