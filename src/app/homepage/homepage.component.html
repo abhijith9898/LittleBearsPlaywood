@@ -8,7 +8,7 @@
         <h3>At Your Doorstep</h3>
       </div>
       <div>
-        <button pButton pRipple label="See Toys" type="button" [routerLink]="['/catalogue']"
+        <button pButton pRipple label="View" type="button" [routerLink]="['/catalogue']"
           class="mr-3 p-button-raised"></button>
       </div>
     </div>
@@ -38,6 +38,8 @@
         </div>
       </div>
     </div>
+    <!-- <video src="assets/lbp-video.mp4" muted loop autoplay></video>
+    <div class="overlay"></div> -->
   
     <!-- ----------------------Questin-slider------------------------------------------ -->
   
@@ -65,7 +67,7 @@
   <p-carousel [value]="newAddedToys" styleClass="custom-carousel" [numVisible]="3" [numScroll]="1" [circular]="true"
     [autoplayInterval]="3000" [responsiveOptions]="responsiveOptions">
     <ng-template pTemplate="header">
-      <h2 style="font-family: sans-serif;font-size: 3em;font-weight: 900;padding-top: 30px;color: rgb(42, 134, 113);">Latest Collection..</h2>
+      <h2 style="font-family: sans-serif;font-size: 3em;font-weight: 900;padding-top: 30px;color: rgb(42, 134, 113);">latest collection</h2>
     </ng-template>
     <ng-template let-toy pTemplate="item">
       <div class="product-item">
@@ -77,7 +79,7 @@
             <h4 class="mb-1">{{toy.toyname}}</h4>
             <!-- <h6 class="mt-0 mb-3">${{toy.price}}</h6> -->
             <!-- <span [class]="'product-badge status-'+product.inventoryStatus.toLowerCase()">{{toy.inventoryStatus}}</span> -->
-            <span style="color: green;">IN STOCK</span>
+            <span style="color: rgb(42, 134, 113);">IN STOCK</span>
           </div>
         </div>
       </div>

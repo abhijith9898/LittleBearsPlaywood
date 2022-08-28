@@ -109,10 +109,17 @@
       /* width: 14%; */
   }
 
-  .shopping-icon {
+  .shopping-icon, .shopping-icon i {
       float: right;
       margin-top: 1%;
-      cursor: pointer;
+      color: white;
+      font-size: 2rem;
+  }
+
+  .shopping-icon:hover, .shopping-icon i:hover {
+    color: #ff9b23;
+    font-size: 2.5rem;    
+    cursor: pointer;
   }
   
   .navbar {
@@ -131,7 +138,7 @@
   
   .navbar a {
     /* font-size: 16px; */
-    color: white;
+    color: #ef8400;
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -147,18 +154,18 @@
     font-size: 16px;  
     border: none;
     outline: none;
-    color: white;
+    color: #ef8400;
     padding: 14px 16px;
     background-color: inherit;
     font: inherit;
     margin: 0;
-    font-size: large !important;
+    font-size: x-large !important;
     font-weight: 500 !important;
   }
   
   .navbar a:hover, .dropdown:hover .dropbtn {
     
-    color:#ef8400
+    color: white
   }
   
   .dropdown-content {
