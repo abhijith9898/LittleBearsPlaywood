@@ -106,6 +106,7 @@
 
   .logo {
       float: left;
+      /* width: 14%; */
   }
 
   .shopping-icon {
@@ -118,14 +119,14 @@
     overflow: hidden;
     background-color: rgb(19 68 70);
     font-family: Arial, Helvetica, sans-serif;    
-    padding: 28px;
+    padding: 30px;
     display: flex;
   }
 
   .menu-items {
     justify-content: center;
     display: flex;
-    width: 75%;
+    width: 82%;
   }
   
   .navbar a {
@@ -134,7 +135,7 @@
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
-    font-size: larger !important;
+    font-size: x-large !important;
     font-weight: 500 !important;
   }
   
